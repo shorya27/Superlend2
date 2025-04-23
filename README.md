@@ -1,66 +1,48 @@
-## Foundry
+# MockLendingVault
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A simple fully tested Solidity vault contract for mock lending. Users can deposit/withdraw token balances (`uint256`), with events and balance tracking.
 
-Foundry consists of:
+---
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+##  Features
 
-## Documentation
+- Deposit & withdraw functions  
+- Tracks per-user balances  
+- Emits `Deposited` & `Withdrawn` events  
+- `getUserDeposit(address)` view
 
-https://book.getfoundry.sh/
+---
 
-## Usage
+##  Deploy (Local with Foundry)
 
-### Build
-
-```shell
-$ forge build
+```bash
+anvil
+forge script script/deploy.s.sol --rpc-url <RPC-URL> --private-key <PRIVATE-KEY> --broadcast
 ```
 
-### Test
+---
 
-```shell
-$ forge test
+## 🧪 Test
+
+```bash
+forge test
 ```
 
-### Format
+---
 
-```shell
-$ forge fmt
+## 📁 Structure
+
+```
+src/     → contract
+test/    → tests
+script/  → deploy script
 ```
 
-### Gas Snapshots
+---
 
-```shell
-$ forge snapshot
-```
+## 📌 Notes
 
-### Anvil
+- No real ERC20 logic (for mock/testing only)  
+- Great for frontend demos or Solidity practice
 
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+--- 
