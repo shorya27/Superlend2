@@ -14,7 +14,7 @@ A simple fully tested Solidity vault contract for mock lending. Users can deposi
 ---
 
 ##  Deploy (Local with Foundry)
-
+To deploy the contracts use the following command:
 ```bash
 anvil
 forge script script/deploy.s.sol --rpc-url <RPC-URL> --private-key <PRIVATE-KEY> --broadcast
@@ -22,15 +22,15 @@ forge script script/deploy.s.sol --rpc-url <RPC-URL> --private-key <PRIVATE-KEY>
 
 ---
 
-## 🧪 Test
-
+##  Test
+To run the tests use the following command:
 ```bash
 forge test
 ```
 
 ---
 
-## 📁 Structure
+##  Structure
 
 ```
 src/     → contract
@@ -40,9 +40,4 @@ script/  → deploy script
 
 ---
 
-## 📌 Notes
 
-- No real ERC20 logic (for mock/testing only)  
-- Great for frontend demos or Solidity practice
-
---- 
