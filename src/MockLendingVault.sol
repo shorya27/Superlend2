@@ -8,7 +8,7 @@ contract MockLendingVault {
     event Deposited(address indexed user, uint256 amount);
     event Withdrawn(address indexed user, uint256 amount);
 
-    // Function to deposit tokens 
+    // Function to deposit tokens
     function deposit(uint256 amount) external {
         require(amount > 0, "Deposit amount must be greater than 0");
         deposits[msg.sender] += amount;
